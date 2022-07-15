@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Source Sans Pro', sans-serif;
+// font-family: 'Kanit', sans-serif;
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+#updateActor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 2rem;
+    background-color: #fff;
+    border: .1rem solid #1B2430;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    box-shadow: inset .05rem .05rem .2rem #1B2430;
+    display: none;
+    cursor: pointer;
+    z-index: 999999999;
+    transition: all .3s;
+    &:hover{
+        background-color: #1B2430;
+        color: #fff;
+    }
+}
+
+#ModalAddNewActor {
+    z-index: 99999;
+
+    img {
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: contain;
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        cursor: pointer;
+    }
+
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        width: 25rem;
+        color: #fff;
+        height: 3rem;
+        outline: none;
+        border: .1rem dotted #fff;
+        background: transparent;
+        margin-bottom: 1rem;
+        padding: 0rem .5rem;
+        letter-spacing: .1rem;
+    }
+
+    button {
+        outline: none;
+        border: .1rem solid #fff;
+        padding: .3rem .5rem;
+        border-radius: .5rem;
+        background-color: #774360;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+header {
+    width: 100%;
+    padding: 10rem 0rem;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+
+    h1 {
+        font-size: 7rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+
+    }
+}
+
+main {
+    .form {
+        max-width: 50rem;
+        height: 7rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            width: calc(100% - 7rem);
+            outline: none;
+            border: .1rem solid #1B2430;
+            padding: 0 1rem;
+            height: 3rem;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            letter-spacing: .1rem;
+        }
+
+        margin: 0 auto;
+
+        img {
+            transition: all .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            cursor: pointer;
+            padding: 1.5rem;
+            width: 7rem;
+            height:7rem;
+            object-fit: contain;
+            overflow: hidden;
+        }
+    }
+
+    .container {
+        max-width: 114rem;
+        margin: 0 auto;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: normal;
+            text-align: left;
+            padding: 1rem 1rem 3rem 1rem;
+            border-bottom: .1rem solid #000;
+        }
+
+        .actors {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 2rem 0rem;
+
+            .card-container {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-bottom: 5rem;
+
+                .card {
+                    .isDeleted {
+                        position: absolute;
+                        width: 5rem;
+                        height: 1.6rem;
+                        background-color: #1B2430;
+                        color: #fff;
+                        right: 0;
+                        bottom: 0;
+                        line-height: 1.6rem;
+                        text-align: center;
+                        font-style: italic;
+                        font-size: 1rem;
+                        border-top-left-radius: .3rem;
+
+                    }
+
+                    width: 20rem;
+                    height: 25rem;
+                    box-shadow: .3rem .3rem .3rem .1rem #774360;
+                    border-radius: .3rem;
+                    overflow: hidden;
+                    position: relative;
+
+                    &:hover {
+                        img.cancel {
+                            display: block;
+                        }
+                    }
+
+                    img.cancel {
+                        cursor: pointer;
+
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: .5rem;
+                        right: .5rem;
+                        object-fit: contain;
+                        display: none;
+                    }
+
+                    .img-container {
+                        border-top-left-radius: .3rem;
+                        border-top-right-radius: .3rem;
+
+                        height: 20rem;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                            height: 20rem;
+                            object-position: center;
+                        }
+
+                        .empty {
+                            width: 100%;
+                            height: 20rem;
+                            background-color: #333;
+                            color: #fff;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            span {
+                                width: 4rem;
+                                height: 4rem;
+                                border-radius: 50%;
+                                font-size: 2.5rem;
+                                line-height: 4rem;
+                                text-align: center;
+                                border: .1rem solid #fff;
+                            }
+
+                        }
+                    }
+
+                    .body {
+                        width: 100%;
+                        height: 5rem;
+                        text-indent: 3rem;
+                        font-size: 1.5rem;
+                        font-style: italic;
+                        color: #333;
+                        position: relative;
+                        border-bottom-left-radius: .3rem;
+                        border-bottom-right-radius: .3rem;
+
+                        line-height: 5rem;
+                        border-bottom: .1rem solid #333;
+                        border-right: .1rem solid #333;
+                        border-left: .1rem solid #333;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: .5rem;
+                            width: 2rem;
+                            height: .1rem;
+                            background-color: #333;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+#AddNewActor {
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        background-color: #fff;
+        color: #333;
+
+    }
+}

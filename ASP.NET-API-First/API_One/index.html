@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shukurov Mushvig - API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    <script src="assets/js/custom.js" defer></script>
+</head>
+
+<body>
+    <div id="updateActor" data-id="0">Update</div>
+    <section id="ModalAddNewActor">
+        <img src="assets/img/skull.png" alt="" id="ModalCross">
+        <input type="text" name="Name" placeholder="Actor Name" id="actorNameCreate">
+        <input type="text" name="Image" placeholder="Image Url" id="actorImageCreate">
+        <button type="button" id="submitCreate">Create</button>
+    </section>
+    <header>
+        <h1>API - Proyekt (Introduction)</h1>
+        <h3>Shukurov Mushvig</h3>
+    </header>
+
+    <main>
+        <div class="form">
+            <input type="text" placeholder="Search" id="findActorName">
+            <img src="assets/img/loupe.png" alt="" id="findActor">
+        </div>
+        <div class="container">
+            <h3>
+                Actors
+            </h3>
+
+            <div class="actors" id="actorsContainer">
+                <!-- <div class="card-container">
+                    <div class="card">
+                        <img src="assets/img/cancel.png" alt="" class="animate__animated animate__rotateIn animate__faster cancel">
+                        <div class="img-container">
+                            <img src="" alt="ApiIntro">
+                        </div>
+                        <div class="body">
+                            Nem Aye
+                        </div>
+                        <span class="isDeleted">deleted</span>
+                    </div>
+                </div> -->
+                <!-- <div class="card-container">
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="empty">
+                                <span id="AddNewActor" onclick="xoddaADDi()">+</span>
+                            </div>
+                        </div>
+                        <div class="body">
+                            Add New Actor
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+
+
+
+</body>
+
+</html>
