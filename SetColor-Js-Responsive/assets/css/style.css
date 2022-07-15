@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+:root {
+  --headercolor: rgb(33, 37, 41);
+  --headercolortext: rgb(33, 37, 41);
+  --leadcolor: rgb(144, 146, 142);
+  --light: #fff;
+  --starcolor: yellow;
+  --settings-bg: #1A3447;
+  --light-07: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  border-color: var(--headercolor);
+  color: var(--light);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.settings {
+  z-index: 100000000;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 20rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--settings-bg);
+  color: var(--light);
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.settings > span {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--settings-bg);
+  color: var(--light);
+  font-size: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: -4rem;
+  cursor: pointer;
+}
+
+.settings input {
+  width: 100%;
+  border: 0.1rem solid var(--light);
+  color: var(--light);
+  padding: 0 .5rem;
+  border-radius: .3rem;
+  margin-bottom: 1rem;
+}
+
+.settings input::-webkit-input-placeholder {
+  color: var(--light-07);
+}
+
+.settings input:-ms-input-placeholder {
+  color: var(--light-07);
+}
+
+.settings input::-ms-input-placeholder {
+  color: var(--light-07);
+}
+
+.settings input::placeholder {
+  color: var(--light-07);
+}
+
+.settings input[type=color] {
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+}
+
+.settings button {
+  width: 100%;
+  background-color: var(--light);
+  color: var(--headercolor);
+  height: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.settings .colorpick-eyedropper-input-trigger {
+  display: none;
+}
+
+.navbar-light-vip {
+  color: var(--headercolortext);
+}
+
+.navbar {
+  font-size: 1.6rem;
+}
+
+.navbar * {
+  font-size: inherit;
+}
+
+.navbar a {
+  color: inherit;
+}
+
+.navbar .navbar-brand {
+  margin-right: 3rem;
+}
+
+.navbar .dropdown-menu {
+  font-size: 1.5rem;
+}
+
+.navbar .btn-outline-dark {
+  letter-spacing: .1rem;
+  padding: .5rem .7rem;
+}
+
+.navbar .btn-outline-dark .rounded-circle {
+  font-size: 1.2rem;
+}
+
+header {
+  width: 100%;
+  height: 30rem;
+  background-color: var(--headercolor);
+  color: var(--light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  font-size: 5.5rem;
+  margin-bottom: .2rem;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 2rem;
+  color: var(--leadcolor);
+}
+
+main {
+  margin: 1rem 0;
+}
+
+main .col-md-3 {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+main .col-md-3 .card_vip {
+  position: relative;
+  -webkit-box-shadow: 0 0 0.3rem 0.2rem var(--leadcolor);
+          box-shadow: 0 0 0.3rem 0.2rem var(--leadcolor);
+  border-radius: .3rem;
+  width: 100%;
+  max-height: 60rem;
+  overflow: hidden;
+}
+
+main .col-md-3 .card_vip .badge-position {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.25rem;
+  background-color: var(--headercolor);
+  color: var(--light);
+  font-weight: 400;
+}
+
+main .col-md-3 .card_vip .img-container {
+  width: 100%;
+  height: 20rem;
+}
+
+main .col-md-3 .card_vip .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .col-md-3 .card_vip .text-container {
+  width: 100%;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem .3rem;
+  color: var(--headercolortext);
+}
+
+main .col-md-3 .card_vip .text-container h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 500;
+  color: var(--headercolortext);
+}
+
+main .col-md-3 .card_vip .text-container .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: .1rem;
+  color: var(--starcolor);
+  margin: 1rem 0;
+}
+
+main .col-md-3 .card_vip .text-container p {
+  text-align: center;
+  margin-bottom: 1rem 0 3rem 0;
+  color: var(--headercolortext);
+}
+
+main .col-md-3 .card_vip .text-container p del {
+  color: var(--leadcolor);
+}
+
+main .col-md-3 .card_vip .text-container button {
+  font-size: 1.6rem;
+  color: var(--headercolortext);
+}
+
+footer {
+  background-color: var(--headercolor);
+  color: var(--light);
+  text-align: center;
+  height: 12rem;
+  width: 100%;
+  line-height: 12rem;
+  font-size: 1.4rem;
+  letter-spacing: .05rem;
+}
+/*# sourceMappingURL=style.css.map */
