@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+.container {
+    max-width: 114rem;
+    min-height: 100vh;
+    padding: 5rem .5rem;
+    margin: 0rem auto;
+
+    .files {
+        width: 100%;
+        height: 3.5rem;
+        border: .1rem solid rgba(0, 0, 0, 0.3);
+        line-height: 3.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+
+        #files {
+            cursor: pointer;
+        }
+    }
+
+    .depo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 5rem 0rem;
+
+        .img {
+            width: 25%;
+            height: 20rem;
+            overflow: hidden;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .vitrin {
+        user-select: none;
+        margin: 5rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .fruit {
+            color: #000;
+            border:.1rem solid rgba(0, 0, 0, 0.3);
+            h1{
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            p{
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+            position: relative;
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            // overflow: hidden;
+            img{
+                width: 90%;
+                object-fit: contain;
+                max-height: 20rem;
+            }   
+        }
+        .apple::before{
+            content: "2 manat";
+            width: 10rem;
+            height: 2rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: center;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: darkred;
+            color: #fff;
+            border-radius: .3rem;
+        }
+        .strawberry::before{
+            content: "5 manat";
+            width: 10rem;
+            height: 2rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: center;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: darkgreen;
+            color: #fff;
+            border-radius: .3rem;
+        }
+        .orange::before{
+            content: "3 manat";
+            width: 10rem;
+            height: 2rem;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            text-align: center;
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rebeccapurple;
+            color: #fff;
+            border-radius: .3rem;
+        }
+    }
+ 
+    
+}
