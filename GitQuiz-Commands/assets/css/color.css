@@ -1,0 +1,9 @@
+:root {
+    ---light: #fff;
+    ---light03: rgba(255, 255, 255, 0.3);
+    ---light01: rgba(255, 255, 255, 0.1);
+    ---dark: #000;
+    ---bg: #4e4e4e;
+    --darkred: darkred;
+    ---myfav: rgb(26, 52, 71);
+}

@@ -1,0 +1,225 @@
+body {
+    width: 100%;
+    min-height: 102vh;
+    overflow-x: hidden;
+    background: var(---bg);
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 2.5px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(---light);
+    font-weight: 500;
+    padding: 5px;
+}
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 31% 69% 70% 30% / 30% 30% 70% 70%;
+    background: linear-gradient(35deg, var(---myfav), var(---bg));
+    margin: 0 2px;
+    font-size: 18px;
+}
+
+.social a:hover {
+    animation: animate1 .5s linear 1;
+    transition: all .2s linear;
+}
+
+.header {
+    width: 100%;
+    height: 35px;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 3px 5px var(---myfav);
+}
+
+.container {
+    border-top: 3px dotted var(---myfav);
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.aciqlama {
+    margin: 20px 0;
+}
+
+.aciqlama h3 {
+    margin-bottom: 20px;
+}
+
+.aciqlama li {
+    padding: 3px 0 3px 15px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.aciqlama li::before {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 7px;
+    height: 2.5px;
+    background: var(---light);
+    left: 0px;
+}
+
+.basliq1 {
+    font-size: 44px;
+    text-align: center;
+}
+
+.basliq2 {
+    font-size: 40px;
+    text-align: center;
+    color: darkred;
+}
+
+#start {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 120px;
+    background: var(---myfav);
+    color: var(---light);
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 20px;
+    /* transition: all .2s linear; */
+}
+
+#start:hover {
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    /* transition: all .2s linear; */
+}
+
+.izahlar li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.izahlar li:nth-child(odd) {
+    background: var(---light01);
+}
+
+.izahlar li:nth-child(even) h4 {
+    color: rgb(10, 113, 254);
+}
+
+.izahlar li h4 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.izahlar li img {
+    width: 100%;
+    border-radius: 3px;
+    object-fit: contain;
+}
+
+.izahlar li p {
+    margin-bottom: 3px;
+}
+
+.izahlar li p a {
+    text-decoration: underline !important;
+}
+
+.alert {
+    margin: 20px 0;
+    padding: 3px;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 200%;
+    border-radius: 3px;
+    background-color: var(--darkred);
+}
+
+
+/* Swalll */
+
+
+/* .swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #4962B3;
+    font-size: 12px;
+    border: 1px solid #3e549a;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+} */
+
+.allTopics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.allTopics a {
+    display: inline-block;
+    min-width: 100px;
+    padding: 2px 3px;
+    background: var(---light);
+    color: var(---myfav);
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#backtotop {
+    position: fixed;
+    display: none;
+    width: 35px;
+    height: 35px;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(---light);
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s;
+    z-index: 100;
+}
+
+#backtotop:hover {
+    font-size: 18px;
+    transform: rotate(35deg);
+    transition: all .2s;
+}

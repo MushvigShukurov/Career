@@ -1,0 +1,120 @@
+#quiz {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.returnBack {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.returnBack a {
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+}
+
+.returnBack a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: var(---light);
+    bottom: 0;
+    left: 0;
+    box-shadow: 1px 2px 3px var(---myfav);
+}
+
+#quiz ul {
+    margin: 50px 0;
+}
+
+.sualBasliq {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.sualBasliq span {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-align: left;
+    padding: 0 15px;
+    font-size: 18px;
+    margin-right: 10px;
+    background: var(--darkred);
+    color: var(---light);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.sualBasliq h3 {
+    line-height: 180%;
+}
+
+#quiz li:not(:first-child) {
+    margin-top: 10px;
+}
+
+#quiz li {
+    line-height: 180%;
+}
+
+#quiz li input[type=radio] {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#quiz li input[type=radio]:checked+label {
+    background: var(---myfav);
+    color: var(---light);
+    transition: all .2s;
+}
+
+#quiz li label {
+    display: block;
+    cursor: pointer;
+    background: var(---light);
+    color: var(---myfav);
+    padding: 4px 5px;
+    transition: all .2s;
+}
+
+.butonlar {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.butonlar button {
+    min-width: 120px;
+    margin-left: 10px;
+    padding: 5px 3px;
+    outline: none;
+    border: 1px solid var(---myfav);
+    background: var(---light);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.butonlar button:hover {
+    transform: translate(-3px, -1px);
+    box-shadow: 2px 1px 3px var(---myfav);
+    transition: all .2s;
+}

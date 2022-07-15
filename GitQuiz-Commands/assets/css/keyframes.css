@@ -1,0 +1,13 @@
+@keyframes animate1 {
+    0% {
+        transform: rotate(35deg);
+        box-shadow: 0 0 5px #fff;
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+    100% {
+        transform: rotate(0);
+        box-shadow: none;
+    }
+}
