@@ -1,0 +1,56 @@
+@media(max-width:1400px) {
+    header {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .left-header {
+        width: 100%;
+        height: auto;
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        color: var(---light);
+        padding: 50px 30px;
+    }
+    .author,
+    .about-me,
+    .site-name {
+        max-width: 90%;
+        margin-bottom: 50px;
+    }
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+    .projeler {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 30px;
+        box-sizing: content-box;
+    }
+    .p-box {
+        z-index: 1;
+        width: 48%;
+        /* margin: 10px; */
+        max-height: 200px;
+    }
+    .contact-form {
+        padding: 0;
+    }
+    footer {
+        margin-top: 15px;
+    }
+    .proyektler-header {
+        padding: 0 30px;
+    }
+}
+
+@media(max-width:700px) {
+    .projelerMain {
+        margin: 0px auto;
+    }
+}

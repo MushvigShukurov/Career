@@ -1,0 +1,91 @@
+.say-sistemleri {
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+
+.say-sistemleri .input-group {
+    position: relative;
+}
+
+.say-sistemleri .input-group label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: all .3s;
+}
+
+#number:focus+label {
+    /* top: 0; */
+    background: var(---light);
+    color: var(---myfav);
+    border-radius: 30px;
+    border: 1px solid var(---myfav);
+    padding: 1px 2px;
+    font-size: 12px;
+    left: auto;
+    right: 30px;
+    transition: all .3s;
+}
+
+.say-sistemleri .input-group input {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    padding: 0 5px;
+    line-height: 35px;
+}
+
+.run {
+    width: 100px;
+    height: 30px;
+    overflow: hidden;
+    background: var(---myfav);
+    color: var(---light);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px auto;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.saySistemleriResult {
+    width: 100%;
+    min-height: 100px;
+}
+
+.saySistemleriResult ul li {
+    margin: 10px 0;
+    padding: 0 5px;
+    background: var(---myfav01);
+    border-radius: 3px;
+}
+
+
+/* .saySistemleriResult ul li strong {
+    background: var(---myfav01);
+    padding: 0 5px;
+    border-radius: 3px;
+} */
+
+.saySisName {
+    display: inline-block;
+    font-weight: 700;
+    width: 50px;
+}
+
+.say-sistemleri .alert {
+    margin: 10px 0;
+    background: var(---myfav01);
+    color: var(---myfav);
+    font-size: 14px;
+    line-height: 200%;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 3px;
+}

@@ -1,0 +1,64 @@
+#logo {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: url(../_site_img/ustablogger_logo1.png);
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#projelerH1 {
+    font-size: 33px;
+    font-weight: 900;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.projelerMain {
+    max-width: 700px;
+    margin: 30px auto;
+    min-height: 100vh;
+    background: var(---light);
+    color: var(---myfav);
+    border: 1px solid var(---myfav);
+    box-shadow: 0 0 66px var(---myfav);
+    position: relative;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+    border-top: 15px solid var(---myfav);
+}
+
+.projelerMain header {
+    position: relative;
+    background: var(---light);
+    width: 100%;
+    height: auto;
+    line-height: 35px;
+    text-align: left;
+    font-size: 16px;
+    color: var(---myfav);
+    padding: 0 5px;
+    margin-bottom: 30px;
+}
+
+.projeContainer {
+    width: 100%;
+    background: var(---light);
+    min-height: auto;
+    color: var(---myfav);
+}
+
+.projelerMain footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    background: var(---light);
+    color: var(---myfav);
+}

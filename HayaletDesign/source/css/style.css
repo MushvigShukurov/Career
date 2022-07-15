@@ -1,0 +1,537 @@
+:root {
+    ----dark: #000;
+    ---light: #fff;
+    ---myfav: #1A3447;
+    ---myfav05: rgba(27, 56, 77, 0.5);
+    ---myfav01: rgba(27, 56, 77, 0.1);
+    ---myfav07: rgba(26, 52, 71, 0.7);
+    -----fav: rgb(10, 113, 254);
+    --dark07: rgba(0, 0, 0, 0.7);
+    --dark05: rgba(0, 0, 0, 0.5);
+    --light07: rgba(255, 255, 255, 0.7);
+    --blogbg: rgb(16, 16, 16);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: var(---light);
+    color: var(--dark07);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 2.5px;
+}
+
+#loading {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: var(---myfav);
+    position: fixed;
+    top: 0;
+    z-index: 100000000;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading span {
+    letter-spacing: 2px;
+    word-spacing: 0;
+    font-size: 24px;
+    font-weight: 300;
+    width: 200px;
+    color: var(---light);
+}
+
+#loading span::after {
+    content: '...';
+    height: 100%;
+    line-height: 20px;
+    display: inline-block;
+    animation: animateloading 1s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes animateloading {
+    0% {
+        width: 5px;
+    }
+    100% {
+        width: auto;
+    }
+}
+
+::selection {
+    background: var(---myfav);
+    color: var(---light);
+}
+
+header {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.left-header {
+    width: 100%;
+    height: 100vh;
+    background: var(----dark);
+    clip-path: polygon(83% 0, 100% 50%, 83% 100%, 0 100%, 0 0);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(---light);
+    padding: 50px;
+}
+
+.author,
+.about-me,
+.site-name {
+    max-width: 63%;
+}
+
+.author {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.about-me {
+    font: 14px;
+    line-height: 180%;
+}
+
+.social {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.social a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: var(---myfav);
+    background: var(---light);
+    position: relative;
+    transition: all .3s;
+}
+
+.social a:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.social a:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.social a:not(:first-child) {
+    border-left: 1px solid var(--dark07);
+}
+
+.social a:after {
+    content: '';
+    height: 0;
+    background: var(--blogbg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all .3s;
+}
+
+.social a:hover::after {
+    height: 3px;
+    animation: animate .1s linear 1;
+}
+
+.social a:hover {
+    background: var(--light07);
+    color: var(----dark);
+}
+
+.site-name {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.container {
+    width: 50%;
+    min-height: 100vh;
+    background: var(---light);
+    margin-left: auto;
+    padding: 10px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: auto;
+    background: url(../_site_img/ustablogger_logo1.png);
+    background-size: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.swp-container {
+    padding: 80px 30px;
+    background: var(--light07);
+}
+
+.swp-container h1 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 4.5px;
+    margin-bottom: 10px;
+    color: var(----dark);
+}
+
+.swiper {
+    margin-bottom: 10px;
+}
+
+.swp-container p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.swp-container blockquote {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--dark07);
+    font-style: italic;
+    margin-left: 50px;
+}
+
+.proyektler-header h3 {
+    margin-bottom: 30px;
+}
+
+.projeler {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.p-box {
+    z-index: 1;
+    width: 48%;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 2px 3px 4px var(---myfav);
+    transition: all .3s;
+    border: 1px solid var(---myfav);
+    background: url(../_site_img/ustablogger_logo1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(---light);
+    position: relative;
+}
+
+.p-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.p-box:hover {
+    transform: translate(-2px, -2px);
+    /* transform: scale(1.3); */
+    transition: all .3s;
+    /* cursor: pointer; */
+    box-shadow: 3px 5px 6px var(---myfav);
+    z-index: 100;
+}
+
+.p-box a {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: -300%;
+    transition: all .3s;
+}
+
+.p-box:hover a {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: var(---myfav);
+    font-size: 24px;
+    color: var(---light);
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form,
+.contact-form form {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    padding: 50px 0;
+    background: transparent;
+    user-select: none;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(---myfav);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contact-form h3 {
+    margin-bottom: 30px;
+}
+
+.contact-form .input-group button {
+    width: 35px;
+    height: 35px;
+    background: var(---myfav);
+    color: var(---light);
+    line-height: 35px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.contact-form .input-group input {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    background: var(---light);
+    padding: 0 5px;
+    transition: all .3s;
+}
+
+.contact-form .input-group textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+    background: var(---light);
+    color: var(----dark);
+    font-size: 14px;
+    line-height: 180%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    transition: all .3s;
+}
+
+.contact-form .input-group textarea:focus {
+    background: var(---myfav05);
+    transition: all .3s;
+}
+
+.contact-form .input-group input:focus {
+    background: var(---myfav05);
+    transition: all .3s;
+}
+
+.contact-form .input-group input:focus::placeholder {
+    color: var(--light07);
+}
+
+.contact-form .input-group textarea::placeholder {
+    color: var(---myfav);
+}
+
+.contact-form .input-group #msjkeyframebtn {
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    background: var(---light);
+    color: var(---myfav);
+    border: 1px solid var(---myfav);
+    border-radius: 3px;
+    top: 10px;
+    right: 10px;
+}
+
+input[name=contactsubmit] {
+    width: 200px;
+    height: 35px;
+    color: var(---light);
+    text-align: center;
+    background: var(---myfav);
+    margin: 10px 0;
+    font-weight: 700;
+    line-height: 35px;
+    transition: all .3s;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+}
+
+input[name=contactsubmit]:hover {
+    background: var(---myfav07);
+    transition: all .3s;
+}
+
+.quiz {
+    width: 100%;
+    user-select: none;
+    height: auto;
+}
+
+.quiz-header {
+    width: 100%;
+    background: var(---myfav);
+    border: 1px solid var(---myfav);
+    color: var(---light);
+    padding: 3px 5px;
+}
+
+.quiz-header li:first-child {
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(---light);
+    color: var(----dark);
+    border-radius: 3px;
+}
+
+.quiz-body {
+    width: 100%;
+}
+
+.quiz-body li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+
+.quiz-body li:nth-child(odd) {
+    background: var(---myfav05);
+    color: var(---light);
+}
+
+.quiz-body li:nth-child(even) {
+    background: var(---myfav07);
+    color: var(---light);
+}
+
+.quiz-body li label {
+    line-height: 180%;
+    cursor: pointer;
+}
+
+.quiz-body li input {
+    width: 15px;
+    height: 15px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.quiz-body li input::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    border-radius: 0;
+    background-color: var(---myfav);
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.quiz-body li input:checked {
+    visibility: hidden;
+}
+
+.quiz-body li input:checked::before {
+    transform: rotate(45deg);
+    left: 0;
+    border-radius: 50%;
+    transition: all .3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.quiz-body li input:checked+label {
+    color: var(---myfav);
+    font-weight: 700;
+}
+
+#quizsubmit {
+    display: block;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    background: var(---myfav);
+    color: var(---light);
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all .3s;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#quizsubmit:hover {
+    background: var(---myfav07);
+    transition: all .3s;
+}
+
+footer {
+    background: var(---light);
+    color: var(---myfav);
+    width: 100%;
+    height: 35px;
+    margin-top: 35px;
+    line-height: 35px;
+    font: 16px;
+    text-align: center;
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+blockquote {
+    position: relative;
+}
+
+blockquote::before {
+    content: '';
+    width: 30px;
+    position: absolute;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: -31px;
+    transform: translateY(-50%);
+}

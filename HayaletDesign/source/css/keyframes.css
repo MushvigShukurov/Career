@@ -1,0 +1,8 @@
+@keyframes animate {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 3px;
+    }
+}
