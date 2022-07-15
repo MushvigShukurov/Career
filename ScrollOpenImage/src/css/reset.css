@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+/* font-family: 'Fredoka', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
