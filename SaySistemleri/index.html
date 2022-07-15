@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Say sistemleri,Say sistemleri arasinda kecid ucun program">
+    <meta name="keywords" content="Say sistemleri,PHP, Program, #codewithmushvig">
+    <meta name="author" content="Shukurov Mushvig">
+    <title>Shukurov Mushvig | Ustablogger.com</title>
+    <link rel="shortcut icon" href="https://www.ustablogger.com/assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <header>Kodladı : Şükürov Müşviq</header>
+        <div id="logo"></div>
+        <h1 id="ustablogger"></h1>
+        <h3 id="infoHeader">Say-Sistemləri</h3>
+        <div class="input-group">
+            <input type="text" id="number" name="number" required autocomplete="off" placeholder="Ədəd :">
+            <select name="format" id="format">
+                <option value="10" selected>10</option>
+                <option value="2">2</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+            </select>
+        </div>
+        <div class="run" id="run">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="alert danger animate__animated" id="alert404">
+            &#128081;&nbsp; Dogru format daxil edin!
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>#2</td>
+                    <td>&#127776;</td>
+                    <td>&nbsp;<span id="result2"></span></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>#8</td>
+                    <td>&#127776;</td>
+                    <td>&nbsp;<span id="result8"></span></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>#10</td>
+                    <td>&#127776;</td>
+                    <td>&nbsp;<span id="result10"></span></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>#16</td>
+                    <td>&#127776;</td>
+                    <td>&nbsp;<span id="result16"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="sonh3">Sosial Hesablar &#9818;</h3>
+        <div class="socialmedia">
+            <a href="https://www.instagram.com/mushvigsh/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/channel/UCv1cilRYda9e8_07YWn4pIg" target="_blank">Youtube</a>
+            <a href="https://github.com/MushvigShukurov" target="_blank">Github</a>
+            <a href="https://twitter.com/mushvi9" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/mushvig-shukurov-51768b20a/" target="_blank">Linkedin</a>
+        </div>
+        <div class="sonsoz">
+            <p>&#10024; Gələcəyin gözləri <br> bizə bütün olub keçənlərin <br> acı eyhamı ilə baxır...</p>
+            <blockquote>Varis - Yetmiş yeddinci gün</blockquote>
+        </div>
+        <footer>
+            <i class="far fa-copyright"></i> Ustablogger.com
+        </footer>
+    </div>
+    <!-- <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script> -->
+    <script src="js/typeit.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        var run = document.getElementById('run');
+        run.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = './function.php';
+            var number = document.getElementById('number').value;
+            var format = document.getElementById('format').value;
+            var saysistem = [number, format];
+            let data = new FormData();
+            data.append("saysistem", saysistem);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.onload = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var numbers = xhr.response;
+                    if (numbers == '404') {
+                        document.getElementById('alert404').classList = 'alert danger animate__animated animate__tada';
+                    } else {
+                        numbers = numbers.split('#');
+                        document.getElementById('result2').innerText = numbers[0];
+                        document.getElementById('result8').innerText = numbers[1];
+                        document.getElementById('result10').innerText = numbers[2];
+                        document.getElementById('result16').innerText = numbers[3];
+                    }
+                } else {
+                    document.getElementById('alert404').classList = 'alert danger animate__animated animate__tada';
+                }
+
+            }
+            xhr.send(data);
+            setTimeout(() => {
+                document.getElementById('alert404').classList = 'alert danger animate__animated animate__flash';
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
