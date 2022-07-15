@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button, textarea, select {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .game-container {
+  width: 90rem;
+  border: 0.1rem solid #371B58;
+  border-radius: 0.3rem;
+}
+.container .game-container .game-settings {
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+.container .game-container .game-header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0rem 5rem 0rem;
+}
+.container .game-container .game-header img {
+  width: 25rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.5rem 0.05rem #371B58;
+}
+.container .game-container .game-content {
+  letter-spacing: 0.1rem;
+  width: 90%;
+  margin: 0 auto;
+  background: #371B58;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 170%;
+  margin-bottom: 5rem;
+}
+.container .game-container .game-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-top: 0.1rem solid #371B58;
+}
+.container .game-container .game-body .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .game-container .game-body .input-group input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: -20rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .game-container .game-body .input-group input:checked + p {
+  background: #371B58;
+  color: #fff;
+}
+.container .game-container .game-body .input-group p {
+  letter-spacing: 0.1rem;
+  width: 100%;
+  font-size: 2rem;
+  background: #5B4B8A;
+  padding: 0.5rem 0.3rem;
+  color: #fff;
+  border-radius: 0.3rem;
+}
+.container .game-container .game-body .input-group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.container .game-container .game-body .btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .game-container .game-body .btn-container button[type=submit] {
+  width: 20rem;
+  height: 4rem;
+  background: #371B58;
+  color: #fff;
+  border-radius: 0.3rem;
+}
+
+.start-template {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #4C3575;
+}
+.start-template h1 {
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.start-template form {
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.start-template form input {
+  color: #fff;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #fff;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.6rem;
+}
+.start-template form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
+}
+.start-template a {
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 0.1rem solid #fff;
+}
+
+button.swal-button.swal-button--confirm {
+  background: #371B58;
+  color: #fff;
+}
+
+.swal-button:not([disabled]):hover {
+  background: #4C3575;
+}
+
+.swal-button:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #5B4B8A;
+}
+
+.stop-game-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #371B58;
+}
+.stop-game-container > div {
+  width: 25rem;
+  height: 3.5rem;
+  line-height: 3.3rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  padding: 0rem 0.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+}
+.stop-game-container > div span {
+  font-weight: normal;
+  margin-left: 1rem;
+}
+.stop-game-container > div a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#footer {
+  display: flex;
+  width: 15rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 1rem;
+}
+#footer a {
+  display: block;
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
+  border: 0.1rem solid #fff;
+  background: #fff;
+  margin: 0rem 1rem;
+  color: #371B58;
+  line-height: 2.8rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
