@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+#svgDivId {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#Layer_1 {
+    width: 300px;
+    height: 300px;
+    fill-opacity: 0;
+    fill: #000;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        fill-opacity: 0;
+    }
+    50% {
+        fill-opacity: 1;
+    }
+}
