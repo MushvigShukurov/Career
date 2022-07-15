@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Ustablogger.com</title>
+    <link rel="shortcut icon" href="assets/images/ustablogger_logo1.png" type="image\png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/ustablogger_logo2.png" alt="Ustablogger.com">
+    </header>
+    <main>
+        <div class="me">
+            <div class="me-img">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                <div>
+                    <h1> Shukurov Mushvig</h1>
+                    <div class="me-btn"><a href="#" id="haqqimda-a-btn"><i class="fas fa-info-circle"></i> Haqqımda</a></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="haqqimda">
+
+            <div><img src="https://i.pinimg.com/564x/39/6c/c6/396cc6c63af0e038d3792ce50f95fc14.jpg" alt=""></div>
+            <h1>Shukurov Mushvig</h1>
+            <h3>PHP Developer</h3>
+            <p>
+                Mən PHP proqramlaşdırma dilini yüksək səviyyədə bilirəm. PHP-nin ən məşhur framework-ü olan Laravel ilə dinamik saytlar hazırlaya bilirəm. 2019-cu ildən Html5, CSS3, Javascript, Jquery, Bootstrap, MySql kimi sahələrdə bilik əldə etməkdəyəm. Eyni zamanda
+                2020-ci ildən PHP proqramlaşdırma dili ilə müxtəlif saytlar hazırlayır, alqoritm qurma bacarığımı inkişaf etdirirəm. Bloq saytlar yazaraq idarə edə bilirəm.
+            </p>
+            <div class="haqqimda-soc">
+                <a href="https://www.instagram.com/mushvigsh/" target="_blank">
+                    <h3><i class="fab fa-instagram"></i></h3>
+                </a>
+                <a href="https://twitter.com/mushvi9" target="_blank">
+                    <h3><i class="fab fa-twitter"></i></h3>
+                </a>
+                <a href="https://github.com/MushvigShukurov" target="_blank">
+                    <h3><i class="fab fa-github"></i></h3>
+                </a>
+                <a href="https://www.youtube.com/channel/UCv1cilRYda9e8_07YWn4pIg" target="_blank">
+                    <h3><i class="fab fa-youtube"></i></h3>
+                </a>
+                <a href="https://www.linkedin.com/in/mushvig-shukurov-51768b20a/" target="_blank">
+                    <h3><i class="fab fa-linkedin-in"></i></h3>
+                </a>
+            </div>
+            <!-- <div class="returnback">
+                <a href="#"><i class="fas fa-long-arrow-alt-left"></i> Ana Səhifə</a>
+            </div> -->
+        </div>
+        <div id="sezarShifreleme">
+            <h1>Sezar Şifrələmə / <small>proqramı</small></h1>
+            <div class="input-group-sezar">
+                <div class="keywordUcun">
+                    <textarea name="sezarMetn" id="sezarMetn" placeholder="Mətn :"></textarea>
+                    <input type="number" name="" value="1" id="sezarAcar" placeholder="Açar :" min="1" max="1000" required>
+                </div>
+                <div class="sezar-result" id="sezarResult">Nəticə :</div>
+            </div>
+
+            <button type="button" id="submitSezar">Şifrələ / Deşifrələ</button>
+            <div class="alert info">
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Açar <b>numeric</b> olmalıdır.
+                </p>
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Deşifrə etmək üçün mətnin sonuna <b>#deshifreEt</b> yaz!
+                </p>
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Kodu yükləmək üçün <b>Github</b> hesabıma bax!
+                </p>
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> <b>Sezar şifrələmə nədir ? Youtube Kanalıma bax !</b>
+                </p>
+            </div>
+        </div>
+        <div id="calculator">
+            <h1>Hesab Maşını / <small>kalkulyator</small></h1>
+            <div class="calc-group">
+                <input type="text" placeholder="@mushvigsh" autocomplete="off" id="calcInput">
+                <button type="button" id="submitCalc">
+                    <i class="fas fa-equals"></i>
+                </button>
+            </div>
+            <div id="calcResult">
+                <p>Nəticə :</p>
+                <p id="calcResultp"></p>
+            </div>
+            <div class="alert info">
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Daxil edilənlər içərisində string olmamalıdır !
+                </p>
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Dogru format daxil etdiyinizdən əmin olun !
+                </p>
+                <p>
+                    <i class="fas fa-skull-crossbones"></i> Hesablamalar 10-saniyeden bir aparılacaq !
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="load-footer"></div>
+        <div class="social">
+            <a href="https://www.instagram.com/mushvigsh/" target="_blank">
+                <h3><i class="fab fa-instagram"></i></h3>
+            </a>
+            <a href="https://twitter.com/mushvi9" target="_blank">
+                <h3><i class="fab fa-twitter"></i></h3>
+            </a>
+            <a href="https://github.com/MushvigShukurov" target="_blank">
+                <h3><i class="fab fa-github"></i></h3>
+            </a>
+            <a href="https://www.youtube.com/channel/UCv1cilRYda9e8_07YWn4pIg" target="_blank">
+                <h3><i class="fab fa-youtube"></i></h3>
+            </a>
+            <a href="https://www.linkedin.com/in/mushvig-shukurov-51768b20a/" target="_blank">
+                <h3><i class="fab fa-linkedin-in"></i></h3>
+            </a>
+        </div>
+        <div class="abune">
+            <div class="abune-text">
+                <!-- <label for="abune">Abunə olaraq yeniliklərdən xəbərdar ol</label> -->
+                <!-- <label for="abune">Instagram hesabıma baxın.</label> -->
+            </div>
+            <!-- <div class="abune-form">
+                <input type="text" id="abune" placeholder="E-mail hesabınız" required autocomplete="off">
+                <button type="button" name="abunesubmit">Abunə Ol <i class="fas fa-bell"></i></button>
+
+            </div> -->
+            <div class="abune-form" style="height: auto;">
+                <!-- <input type="text" id="abune" placeholder="E-mail hesabınız" required autocomplete="off"> -->
+                <a href="https://instagram.com/mushvigsh/" target="_blank" style="padding: 3px 5px;border:1px solid var(--fav);display: block;">Instagram hesabıma baxın &nbsp;<i class="fas fa-bell"></i></a>
+
+            </div>
+        </div>
+        <div class="cpyrght">
+            <h5><i class="fas fa-copyright"></i>&nbsp;ustablogger.com - 2022</h5>
+        </div>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/jquery/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            document.getElementById("haqqimda-a-btn").click();
+        });
+    </script>
+</body>
+
+</html>
