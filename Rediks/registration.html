@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/teamspeak_logo-512_1200x1200.png" type="image/png">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="reg-container">
+
+        <form action="" method="POST" id="regForm">
+            <a href="./" class="far fa-arrow-alt-circle-left"></a>
+            <h1>Registration Form</h1>
+            <label for="">
+                <span>E-mail hesabınız :</span>
+                <input type="text" required minlength="7">
+            </label>
+            <label for="">
+                <span>Şifrəniz :</span>
+                <input type="password" minlength="7" id="regPassword" required>
+                <i class="far fa-eye"></i>
+            </label>
+            <label for="">
+                <span>Təkrar Şifrəniz :</span>
+                <input type="password" minlength="7" id="regRePassword" required>
+                <i class="far fa-eye"></i>
+            </label>
+            <button type="submit" name="reg-btn">Təsdiqlə</button>
+            <a href="login.html" id="redirectLogin">Hesabın var ?</a>
+        </form>
+    </div>
+    <script src="assets/js/seePassword.js"></script>
+</body>
+
+</html>

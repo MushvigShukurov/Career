@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/teamspeak_logo-512_1200x1200.png" type="image/png">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="login-container">
+
+        <form action="" method="POST" id="loginForm">
+            <a href="./" class="far fa-arrow-alt-circle-left"></a>
+            <h1>Login Form</h1>
+            <label for="">
+                <span>E-mail hesabınız :</span>
+                <input type="text" required minlength="7" oninvalid="this.setCustomValidity('E-mail daxil edin!')"
+                    oninput="this.setCustomValidity('')">
+            </label>
+            <label for="">
+                <span>Şifrəniz :</span>
+                <input type="password" minlength="7" id="loginPassword" required
+                    oninvalid="this.setCustomValidity('Şifrənizi daxil edin!')" oninput="this.setCustomValidity('')">
+                <i class="far fa-eye"></i>
+            </label>
+            <button type="submit" name="login-btn">Daxil Ol</button>
+            <a href="registration.html" id="redirectRegister">Yeni hesab yarat</a>
+        </form>
+    </div>
+    <script src="assets/js/seePassword.js"></script>
+</body>
+
+</html>
