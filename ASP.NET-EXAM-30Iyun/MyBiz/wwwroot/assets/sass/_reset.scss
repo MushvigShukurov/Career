@@ -1,0 +1,39 @@
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,ol{
+    list-style: none;
+}
+li{
+    list-style-type: none;
+}
+table{
+    border-spacing: 0rem;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+input,button,textarea,select{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+button{
+    cursor: pointer;
+}
+.container{
+    max-width: 114rem;
+    margin: 0 auto;
+}

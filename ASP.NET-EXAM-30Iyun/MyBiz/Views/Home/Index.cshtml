@@ -1,0 +1,251 @@
+﻿
+@model List<Team>
+@{
+    ViewData["Title"] = "MyBiz Bootstrap Template";
+}
+
+<!-- Swiper -->
+<div class="swiper introSwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: url(assets/img/slide-1.jpg);">
+            <div class="slider-container">
+                <h1>Sequi ea ut et est quaerat</h1>
+                <p>
+                    Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut
+                    aliquam.
+                    Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+                    repellendus
+                    deleniti vel. Minus et tempore modi architecto.
+                </p>
+                <button type="button">Read More</button>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background: url(assets/img/slide-2.jpg);">
+            <div class="slider-container">
+                <h1>Sequi ea ut et est quaerat</h1>
+                <p>
+                    Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut
+                    aliquam.
+                    Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+                    repellendus
+                    deleniti vel. Minus et tempore modi architecto.
+                </p>
+                <button type="button">Read More</button>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background: url(assets/img/slide-3.jpg);">
+            <div class="slider-container">
+                <h1>Sequi ea ut et est quaerat</h1>
+                <p>
+                    Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut
+                    aliquam.
+                    Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
+                    repellendus
+                    deleniti vel. Minus et tempore modi architecto.
+                </p>
+                <button type="button">Read More</button>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next pagination-arrow"></div>
+    <div class="swiper-button-prev pagination-arrow"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<section class="services">
+    <div class="container">
+        <h1>SERVICES</h1>
+        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        <div class="services-container">
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-item-container">
+                <div class="services-item">
+                    <div class="left">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem, ipsum.</h3>
+                        <p>
+                            Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="team">
+    <div class="container">
+        <h1>TEAM</h1>
+        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        <div class="team-container">
+            @foreach (var item in Model)
+            {
+                <div class="team-item-container">
+                    <div class="team-item">
+                        <div class="left">
+                            <img src="~/upload/@item.ImageSrc" alt="">
+                        </div>
+                        <div class="right">
+                            <h3 class="fullName">@item.FullName</h3>
+                            <div class="position">@item.Position</div>
+                            <div class="description">
+                                @item.Description
+                            </div>
+                            <div class="social-media">
+                                <a href="@item.Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="@item.Linkedin">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="@item.Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="@item.Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+
+<section class="contact">
+    <div class="container">
+        <h1>CONTACT</h1>
+        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.748317523108!2d49.813257115705156!3d40.37010466639721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dc397d94dc3%3A0x617bc46b47244c00!2sAzerbaijan%20Technical%20University!5e0!3m2!1sen!2s!4v1656570795483!5m2!1sen!2s"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact-cards">
+        <div class="container">
+
+            <div class="card-container">
+                <div class="cardd">
+                    <div class="left">
+                        <i class="fa-solid fa-location-pin"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Location:</h3>
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                    </div>
+                </div>
+                <div class="cardd">
+                    <div class="left">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Email:</h3>
+                        <p>info@example.com</p>
+                        <p>info2@example.com</p>
+                    </div>
+                </div>
+                <div class="cardd">
+                    <div class="left">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Call:</h3>
+                        <p>+1 5589 55488 51</p>
+                        <p>+1 5589 55488 52</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Your Email">
+                </div>
+                <input type="text" placeholder="Subject">
+                <textarea name="" id="" placeholder="Message"></textarea>
+                <div class="center-btn">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

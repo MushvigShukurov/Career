@@ -1,0 +1,46 @@
+﻿@model Team
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="FullName">FullName</label>
+        <input asp-for="FullName" class="form-control">
+        <small asp-validation-for="FullName" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+        <small asp-validation-for="Description" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Position">Position</label>
+        <input asp-for="Position" class="form-control">
+        <small asp-validation-for="Position" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageFile">ImageFile</label>
+        <input asp-for="ImageFile" class="form-control">
+        <small asp-validation-for="ImageFile" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Instagram">Instagram</label>
+        <input asp-for="Instagram" class="form-control">
+        <small asp-validation-for="Instagram" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Facebook">Facebook</label>
+        <input asp-for="Facebook" class="form-control">
+        <small asp-validation-for="Facebook" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Twitter">Twitter</label>
+        <input asp-for="Twitter" class="form-control">
+        <small asp-validation-for="Twitter" class="text-danger"></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Linkedin">Linkedin</label>
+        <input asp-for="Linkedin" class="form-control">
+        <small asp-validation-for="Linkedin" class="text-danger"></small>
+    </div>
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

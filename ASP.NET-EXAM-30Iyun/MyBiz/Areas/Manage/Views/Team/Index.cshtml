@@ -1,0 +1,95 @@
+﻿@model PaginationVM<Team>
+<div class="mb-4">
+    <a class="btn btn-primary" asp-controller="Team" asp-action="Create">Add New Team</a>
+</div>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>FullName</th>
+                        <th>Position</th>
+                        <th>Description</th>
+                        <th>Instagram</th>
+                        <th>Facebook</th>
+                        <th>Twitter</th>
+                        <th>Linkedin</th>
+                        <th>Image</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>@item.FullName</td>
+                            <td>@item.Position</td>
+                            <td>@item.Description</td>
+                            <td>@item.Instagram</td>
+                            <td>@item.Facebook</td>
+                            <td>@item.Twitter</td>
+                            <td>@item.Linkedin</td>
+                            <td><img src="~/upload/@item.ImageSrc" style="width:100px;height:70px;object-fit:cover;" /></td>
+                            <td>
+                                <a class="btn btn-success" asp-controller="Team" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-danger" id="deleteBtn">Delete</a>
+                                <a style="display:none;" id="deleteOk" asp-controller="Team" asp-action="Delete" asp-route-id="@item.Id"></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="my-y">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        @if (Model.ActivePage > 1)
+                        {
+                            <li class="page-item"><a class="page-link"  asp-controller="Team" asp-action="Index" asp-route-page="@(Model.ActivePage-1)">Previous</a></li>
+                        }
+                        @for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            <li class="page-item"><a class="page-link" asp-controller="Team" asp-action="Index" asp-route-page="@i">@i</a></li>
+
+                        }
+                       
+
+                        @if (Model.ActivePage < Model.PageCount)
+                        {
+                            <li class="page-item"><a class="page-link" asp-controller="Team" asp-action="Index" asp-route-page="@(Model.ActivePage+1)">Next</a></li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let deleteBtn = document.getElementById("deleteBtn");
+        deleteBtn.addEventListener("click", function (e) {
+            swal({
+                title: "Diqqet?",
+                text: "Silmek Istediyinizden Eminsiniz ?!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        document.getElementById("deleteOk").click();
+                    } else {
+                        e.preventDefault();
+                        swal("Your imaginary file is safe!");
+                    }
+                });
+        });
+    </script>
+}

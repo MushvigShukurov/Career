@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+// font-family: 'Open Sans', sans-serif;
+@import "_reset.scss";
+@import "_mixins.scss";
+
+
+// variables
+$main-color: rgb(1, 177, 215);
+$main-color-opacity: rgba(1, 177, 215, 0.2);
+$light: #fff;
+$dark: #000;
+$services: rgb(53, 65, 68);
+$services-paragraph: rgb(68, 68, 68);
+$slider-opacity: rgba(0, 0, 0, 0.5);
+$slider-opacity02: rgba(0, 0, 0, 0.2);
+$footer-top: #2a3336;
+$footer-bottom: #1f2627;
+$railway: 'Raleway', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+
+
+#backToTop {
+    display: none;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: $main-color;
+    line-height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    color: $light;
+    border-radius: .3rem;
+}
+// Navbar
+.navbar-vip{
+    z-index: 99999999;
+    font-size: 1.6rem;
+    font-family: $railway;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    .navbar-brand{
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        span{
+            &:nth-child(1){
+                color: $services;
+            }
+            &:nth-child(2){
+                color: $main-color;
+            }
+        }
+    }
+    #contactLi{
+        color:$main-color;
+    }
+   
+}
+// Intro Slider
+
+.introSwiper {
+    margin-top: 6rem;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 2rem;
+
+    .swiper-wrapper {
+        .swiper-slide {
+            .slider-container {
+                width: 100%;
+                height: 70vh;
+                background-color: $slider-opacity;
+                @include d-flex-c-c;
+                flex-direction: column;
+                color: $light;
+
+                h1 {
+                    font-size: 4.8rem;
+                    margin-bottom: 3rem;
+                    font-family: $railway;
+                }
+
+                p {
+                    font-size: 1.6rem;
+
+                    font-family: $openSans;
+                    max-width: 90rem;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-bottom: 4rem;
+                }
+
+                button {
+                    font-size: 1.4rem;
+                    background-color: $main-color;
+                    color: $light;
+                    padding: .7rem 1.2rem;
+                    border-radius: .3rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Services
+.services {
+    @include servicesAndTeam;
+
+    .container {
+
+
+        .services-container {
+            flex-wrap: wrap;
+            @include d-flex-sb-fs;
+
+            .services-item-container {
+                @include servicesAndTeamItemContainer;
+
+                .services-item {
+                    @include d-flex-sb-fs;
+
+                    .left {
+                        i {
+                            width: 5rem;
+                            height: 5rem;
+                            font-size: 3rem;
+                            line-height: 5rem;
+                            text-align: center;
+                            color: $main-color;
+                        }
+                    }
+
+                    .right {
+                        padding: .5rem;
+
+                        h3 {
+                            font-size: 1.8rem;
+                            color: $services;
+                            margin-bottom: 1rem;
+                            font-family: $railway;
+                            letter-spacing: .1rem;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            color: $services-paragraph;
+                            font-family: $openSans;
+                            line-height: 180%;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}
+
+.team {
+    @include servicesAndTeam;
+
+    .container {
+        .team-container {
+            flex-wrap: wrap;
+            @include d-flex-sb-fs;
+
+            .team-item-container {
+                @include servicesAndTeamItemContainer;
+                width: calc(100% / 2);
+
+                .team-item {
+                    box-shadow: .1rem .1rem .7rem .1rem $slider-opacity02;
+                    border-radius: .3rem;
+                    @include d-flex-sb-fs;
+                    padding: 1rem;
+                    align-items: center;
+
+                    .left {
+                        width: 40%;
+                        overflow: hidden;
+                        border-radius: 50%;
+
+                        img {
+                            cursor: pointer;
+                            transition: all .2s;
+                            width: 100%;
+                            border-radius: 50%;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+
+                    .right {
+                        padding: 1rem;
+                        width: 60%;
+
+                        .fullName {
+                            font-size: 2rem;
+                            font-family: $railway;
+                            margin-bottom: .5rem;
+                        }
+
+                        .position {
+                            font-size: 1.5rem;
+                            font-family: $openSans;
+                            margin-bottom: 1rem;
+                            position: relative;
+
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                width: 15%;
+                                height: .1rem;
+                                background-color: $main-color;
+                                bottom: -.5rem;
+                                left: 0;
+                            }
+                        }
+
+                        .description {
+                            font-size: 1.4rem;
+                            font-family: $openSans;
+                            margin-bottom: 1rem;
+                        }
+
+                        .social-media {
+                            a {
+                                transition: all .2s;
+
+                                &:hover {
+                                    background-color: $main-color;
+                                }
+
+                                display: inline-block;
+                                width: 3rem;
+                                height: 3rem;
+                                font-size: 1.5rem;
+                                line-height: 3rem;
+                                text-align: center;
+
+                                border-radius: 50%;
+                                color: $light;
+                                background-color: $slider-opacity;
+
+                                &:not(:first-child) {
+                                    margin-left: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    @include servicesAndTeam;
+
+    .map {
+        iframe {
+            width: 100%;
+            height: 50vh;
+        }
+    }
+
+    .contact-cards {
+        padding: 10rem 0rem;
+        padding-bottom: 0rem;
+
+        .container {
+            box-shadow: .1rem .1rem .7rem .1rem $slider-opacity02;
+            padding: 1rem;
+
+            .card-container {
+                @include d-flex-sb-fs;
+                margin-bottom: 3rem;
+
+                .cardd {
+                    @include d-flex-sb-fs;
+                    width: 30%;
+                    justify-content: flex-start;
+
+                    .left {
+                        width: 5rem;
+                        height: 5rem;
+                        font-size: 3rem;
+                        @include d-flex-c-c;
+                        color: $main-color;
+                        background-color: $main-color-opacity;
+                        border-radius: 50%;
+                    }
+
+                    .right {
+                        padding: 1rem;
+
+                        h3 {
+                            font-size: 2.2rem;
+                            margin-bottom: 1rem;
+                            color: $services;
+                            font-family: $railway;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            color: $services-paragraph;
+                            margin-bottom: .5rem;
+                            font-family: $openSans;
+                        }
+                    }
+                }
+            }
+
+            form {
+
+                .input-group {
+                    width: 100%;
+                    @include d-flex-sb-c;
+                    margin-bottom: 1rem;
+
+                    input {
+                        @include input;
+                    }
+                }
+
+                input {
+                    @include input;
+                    margin-bottom: 1rem;
+                }
+
+                textarea {
+                    width: 100%;
+                    padding: 1rem;
+                    font-size: 1.4rem;
+                    resize: vertical;
+                    border: .1rem solid $slider-opacity02;
+                    min-height: 10rem;
+                    margin-bottom: 3rem;
+                }
+
+                .center-btn {
+                    @include d-flex-c-c;
+                    width: 100%;
+                    padding: 1rem;
+
+                    button {
+                        font-size: 1.4rem;
+                        background-color: $main-color;
+                        color: $light;
+                        padding: .7rem 1.2rem;
+                        border-radius: .3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .top {
+        background-color: $footer-top;
+        padding: 5rem 0rem;
+
+        .container {
+            @include d-flex-sb-c;
+            align-items: stretch;
+
+            .left {
+                width: 70%;
+                @include d-flex-sb-c;
+                justify-content: space-around;
+
+                .box {
+                    color: $light;
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                        font-family: $railway;
+                    }
+
+                    &>a {
+                        font-size: 1.4rem;
+                        font-family: $openSans;
+                        margin-bottom: 1rem;
+
+                        i {
+                            color: $main-color;
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        font-family: $railway;
+
+                        h1 {
+                            font-size: 2.4rem;
+                            margin-bottom: 2rem;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        .social-media {
+                            a {
+                                display: inline-block;
+                                width: 3rem;
+                                height: 3rem;
+                                line-height: 3rem;
+                                text-align: center;
+                                font-size: 1.5rem;
+                                border-radius: .3rem;
+                                background-color: $slider-opacity02;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+            .right {
+                width: 30%;
+                color: $light;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3 {
+                    font-family: $railway;
+                    font-size: 1.6rem;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-family: $openSans;
+                    font-size: 1.4rem;
+                    margin-bottom: 1.5rem
+                }
+
+                .subscribe {
+                    @include d-flex-sb-c;
+                    border-radius: .3rem;
+                    overflow: hidden;
+
+                    button {
+                        width: 11rem;
+                        background-color: $main-color;
+                        height: 3.5rem;
+
+                        color: $light;
+                    }
+
+                    input {
+                        width: calc(100% - 11rem);
+                        background-color: $light;
+                        height: 3.5rem;
+                        padding: 0rem 1rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        padding: 4rem 1rem;
+        text-align: center;
+        font-size: 1.4rem;
+        background-color: $footer-bottom;
+        font-family: $openSans;
+        color: $light;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $main-color;
+            }
+        }
+    }
+}
+.swiper-pagination-bullet{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $light;
+}
+.pagination-arrow{
+    color: $light;
+    &::after{
+        font-size: 2rem
+    }
+}
+@import "_media.scss";

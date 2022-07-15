@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+table {
+  border-spacing: 0rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+input, button, textarea, select {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: rgb(1, 177, 215);
+  line-height: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3rem;
+}
+
+.navbar-vip {
+  z-index: 99999999;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navbar-vip .navbar-brand {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.navbar-vip .navbar-brand span:nth-child(1) {
+  color: rgb(53, 65, 68);
+}
+.navbar-vip .navbar-brand span:nth-child(2) {
+  color: rgb(1, 177, 215);
+}
+.navbar-vip #contactLi {
+  color: rgb(1, 177, 215);
+}
+
+.introSwiper {
+  margin-top: 6rem;
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 2rem;
+}
+.introSwiper .swiper-wrapper .swiper-slide .slider-container {
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.introSwiper .swiper-wrapper .swiper-slide .slider-container h1 {
+  font-size: 4.8rem;
+  margin-bottom: 3rem;
+  font-family: "Raleway", sans-serif;
+}
+.introSwiper .swiper-wrapper .swiper-slide .slider-container p {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  max-width: 90rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.introSwiper .swiper-wrapper .swiper-slide .slider-container button {
+  font-size: 1.4rem;
+  background-color: rgb(1, 177, 215);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.3rem;
+}
+
+.services {
+  width: 100%;
+  padding: 10rem 0rem;
+}
+.services .container {
+  color: rgb(53, 65, 68);
+}
+.services .container h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: "Raleway", sans-serif;
+}
+.services .container > p {
+  color: rgb(68, 68, 68);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.services .container .services-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.services .container .services-container .services-item-container {
+  width: 33.3333333333%;
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+.services .container .services-container .services-item-container .services-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.services .container .services-container .services-item-container .services-item .left i {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  line-height: 5rem;
+  text-align: center;
+  color: rgb(1, 177, 215);
+}
+.services .container .services-container .services-item-container .services-item .right {
+  padding: 0.5rem;
+}
+.services .container .services-container .services-item-container .services-item .right h3 {
+  font-size: 1.8rem;
+  color: rgb(53, 65, 68);
+  margin-bottom: 1rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.1rem;
+}
+.services .container .services-container .services-item-container .services-item .right p {
+  font-size: 1.4rem;
+  color: rgb(68, 68, 68);
+  font-family: "Open Sans", sans-serif;
+  line-height: 180%;
+}
+
+.team {
+  width: 100%;
+  padding: 10rem 0rem;
+}
+.team .container {
+  color: rgb(53, 65, 68);
+}
+.team .container h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: "Raleway", sans-serif;
+}
+.team .container > p {
+  color: rgb(68, 68, 68);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.team .container .team-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.team .container .team-container .team-item-container {
+  width: 33.3333333333%;
+  margin-bottom: 5rem;
+  padding: 1rem;
+  width: 50%;
+}
+.team .container .team-container .team-item-container .team-item {
+  box-shadow: 0.1rem 0.1rem 0.7rem 0.1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  align-items: center;
+}
+.team .container .team-container .team-item-container .team-item .left {
+  width: 40%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.team .container .team-container .team-item-container .team-item .left img {
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  border-radius: 50%;
+}
+.team .container .team-container .team-item-container .team-item .left img:hover {
+  transform: scale(1.1);
+}
+.team .container .team-container .team-item-container .team-item .right {
+  padding: 1rem;
+  width: 60%;
+}
+.team .container .team-container .team-item-container .team-item .right .fullName {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0.5rem;
+}
+.team .container .team-container .team-item-container .team-item .right .position {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.team .container .team-container .team-item-container .team-item .right .position::after {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 0.1rem;
+  background-color: rgb(1, 177, 215);
+  bottom: -0.5rem;
+  left: 0;
+}
+.team .container .team-container .team-item-container .team-item .right .description {
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+.team .container .team-container .team-item-container .team-item .right .social-media a {
+  transition: all 0.2s;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.team .container .team-container .team-item-container .team-item .right .social-media a:hover {
+  background-color: rgb(1, 177, 215);
+}
+.team .container .team-container .team-item-container .team-item .right .social-media a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.contact {
+  width: 100%;
+  padding: 10rem 0rem;
+}
+.contact .container {
+  color: rgb(53, 65, 68);
+}
+.contact .container h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: "Raleway", sans-serif;
+}
+.contact .container > p {
+  color: rgb(68, 68, 68);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+.contact .map iframe {
+  width: 100%;
+  height: 50vh;
+}
+.contact .contact-cards {
+  padding: 10rem 0rem;
+  padding-bottom: 0rem;
+}
+.contact .contact-cards .container {
+  box-shadow: 0.1rem 0.1rem 0.7rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+.contact .contact-cards .container .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.contact .contact-cards .container .card-container .cardd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30%;
+  justify-content: flex-start;
+}
+.contact .contact-cards .container .card-container .cardd .left {
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(1, 177, 215);
+  background-color: rgba(1, 177, 215, 0.2);
+  border-radius: 50%;
+}
+.contact .contact-cards .container .card-container .cardd .right {
+  padding: 1rem;
+}
+.contact .contact-cards .container .card-container .cardd .right h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: rgb(53, 65, 68);
+  font-family: "Raleway", sans-serif;
+}
+.contact .contact-cards .container .card-container .cardd .right p {
+  font-size: 1.4rem;
+  color: rgb(68, 68, 68);
+  margin-bottom: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+.contact .contact-cards .container form .input-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact .contact-cards .container form .input-group input {
+  width: 100%;
+  height: 4rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 0rem 1rem;
+}
+.contact .contact-cards .container form .input-group input::placeholder {
+  letter-spacing: 0.1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.contact .contact-cards .container form input {
+  width: 100%;
+  height: 4rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 0rem 1rem;
+  margin-bottom: 1rem;
+}
+.contact .contact-cards .container form input::placeholder {
+  letter-spacing: 0.1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.contact .contact-cards .container form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  resize: vertical;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  min-height: 10rem;
+  margin-bottom: 3rem;
+}
+.contact .contact-cards .container form .center-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.contact .contact-cards .container form .center-btn button {
+  font-size: 1.4rem;
+  background-color: rgb(1, 177, 215);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.3rem;
+}
+
+footer .top {
+  background-color: #2a3336;
+  padding: 5rem 0rem;
+}
+footer .top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: stretch;
+}
+footer .top .container .left {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .top .container .left .box {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+footer .top .container .left .box h2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+footer .top .container .left .box > a {
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+footer .top .container .left .box > a i {
+  color: rgb(1, 177, 215);
+  margin-right: 1rem;
+}
+footer .top .container .left .box:nth-child(1) {
+  font-family: "Raleway", sans-serif;
+}
+footer .top .container .left .box:nth-child(1) h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+footer .top .container .left .box:nth-child(1) p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+footer .top .container .left .box:nth-child(1) .social-media a {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+footer .top .container .right {
+  width: 30%;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .top .container .right h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+footer .top .container .right p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+footer .top .container .right .subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+footer .top .container .right .subscribe button {
+  width: 11rem;
+  background-color: rgb(1, 177, 215);
+  height: 3.5rem;
+  color: #fff;
+}
+footer .top .container .right .subscribe input {
+  width: calc(100% - 11rem);
+  background-color: #fff;
+  height: 3.5rem;
+  padding: 0rem 1rem;
+}
+footer .bottom {
+  padding: 4rem 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: #1f2627;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+footer .bottom p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+footer .bottom p a {
+  color: rgb(1, 177, 215);
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pagination-arrow {
+  color: #fff;
+}
+.pagination-arrow::after {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .introSwiper {
+    margin-bottom: 1.5rem;
+  }
+  .introSwiper .swiper-wrapper .swiper-slide .slider-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .services .container .services-container {
+    flex-direction: column;
+  }
+  .services .container .services-container .services-item-container {
+    width: 100%;
+  }
+  .services .container .services-container .services-item-container .services-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .team {
+    width: 100%;
+    padding: 10rem 0rem;
+  }
+  .team .container {
+    color: rgb(53, 65, 68);
+  }
+  .team .container h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .team .container > p {
+    color: rgb(68, 68, 68);
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+  }
+  .team .container .team-container {
+    flex-direction: column;
+  }
+  .team .container .team-container .team-item-container {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+    padding: 10rem 0rem;
+  }
+  .contact .container {
+    color: rgb(53, 65, 68);
+  }
+  .contact .container h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .contact .container > p {
+    color: rgb(68, 68, 68);
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+  }
+  .contact .map iframe {
+    width: 100%;
+    height: 50vh;
+  }
+  .contact .contact-cards {
+    padding: 10rem 0rem;
+    padding-bottom: 0rem;
+  }
+  .contact .contact-cards .container {
+    box-shadow: 0.1rem 0.1rem 0.7rem 0.1rem rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+  .contact .contact-cards .container .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    flex-direction: column;
+  }
+  .contact .contact-cards .container .card-container .cardd {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+  }
+  .contact .contact-cards .container .card-container .cardd .left {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(1, 177, 215);
+    background-color: rgba(1, 177, 215, 0.2);
+    border-radius: 50%;
+  }
+
+  footer .top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .top .container .left {
+    flex-direction: column;
+  }
+  footer .top .container .left .box {
+    width: 100%;
+    padding: 1rem;
+  }
+  footer .top .container .right {
+    width: 100%;
+  }
+  footer .top .container .right .subscribe {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
