@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shukurov Mushvig | Javascript Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <i class="fa-brands fa-angellist"></i>
+            <div class="counter" data-value="124"></div>
+            <p class="paragraph">Hello World</p>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-apple-whole"></i>
+            <div class="counter" data-value="234"></div>
+            <p class="paragraph">Salam Dunya</p>
+        </div>
+        <div class="box">
+            <i class="fa-brands fa-bitcoin"></i>
+            <div class="counter" data-value="56"></div>
+            <p class="paragraph">Merhaba Dunya</p>
+        </div>
+    </div>
+
+
+    <script>
+        let counters = document.querySelectorAll(".counter");
+        counters.forEach(counter=>{
+            console.log(counter.getAttribute("data-value"))
+            let min = 0;
+            let value = counter.getAttribute("data-value");
+            HaydeBakalim(min);
+
+            let ourInterval = setInterval(() => {
+                if (min < value) {
+                    min++;
+                    HaydeBakalim(min);
+                }
+            }, 1);
+            function HaydeBakalim(count) {
+            counter.innerHTML = count;
+        }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+    </script>
+</body>
+
+</html>
