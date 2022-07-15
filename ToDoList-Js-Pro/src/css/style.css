@@ -1,0 +1,177 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0rem auto;
+  padding: 5rem .5rem;
+}
+
+.container h1 {
+  display: block;
+  max-width: 20rem;
+  margin: 0rem auto;
+  color: #183153;
+  font-size: 2.4rem;
+  text-align: center;
+  letter-spacing: .1rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.container h1::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: .3rem;
+  border-radius: .2rem;
+  background-color: #183153;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: -20%;
+  left: 50%;
+}
+
+.container h1:hover::before {
+  bottom: -19%;
+}
+
+.container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+  padding: 5rem 0rem;
+}
+
+.container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container ul li:hover {
+  background-color: rgba(24, 49, 83, 0.7);
+}
+
+.container ul li:not(:last-child) {
+  border-bottom: 0.1rem solid rgba(24, 49, 83, 0.5);
+}
+
+.container ul li:nth-child(odd) {
+  background-color: rgba(24, 49, 83, 0.5);
+}
+
+.container ul li p {
+  font-size: 1.4rem;
+  line-height: 180%;
+  width: calc(100% - 4.5rem);
+  padding: .3rem;
+}
+
+.container ul li p::first-letter {
+  font-size: 2.4rem;
+  color: #000000;
+  margin-right: .5rem;
+}
+
+.container ul li i {
+  width: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  color: #183153;
+  cursor: pointer;
+}
+
+.container ul li i:hover {
+  color: #000000;
+}
+
+.group {
+  width: 100%;
+  height: 3.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.group button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #183153;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.group button:hover {
+  background-color: #183153b0;
+}
+
+.group input {
+  width: calc(100% - 4.5rem);
+  height: 2.5rem;
+  border: .1rem solid #183153;
+  padding: 0 .5rem;
+  color: #183153;
+}
+
+.group input:focus {
+  background-color: rgba(24, 49, 83, 0.25);
+}
+/*# sourceMappingURL=style.css.map */
