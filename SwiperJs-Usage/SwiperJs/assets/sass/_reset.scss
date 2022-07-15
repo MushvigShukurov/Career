@@ -1,0 +1,27 @@
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0rem;
+    padding:0rem;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+button,input,textarea,select{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
