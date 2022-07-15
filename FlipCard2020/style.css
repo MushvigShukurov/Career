@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #444;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 320px;
+    height: 450px;
+    cursor: pointer;
+    position: relative;
+}
+
+.first {
+    background: url(img/pexels-cottonbro-3692594.jpg);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.second {
+    background: url(img/pexels-leah-kelley-6480701.jpg);
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.second,
+.first {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .6s linear;
+}
+
+.container:hover>.first {
+    transform: perspective(600px) rotateY(-180deg);
+    transition: all .6s linear;
+}
+
+.container:hover>.second {
+    transform: perspective(600px) rotateY(0deg);
+    transition: all .6s linear;
+}
