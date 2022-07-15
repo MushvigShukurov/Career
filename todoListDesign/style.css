@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/* 
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border-spacing: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: #e2e2e2;
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    width: 500px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: transparent;
+    /* border-left: 1px dotted #000;
+    border-right: 1px dotted #000; */
+    padding: 10px 5px;
+}
+
+.card-1 {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    /* margin: 25px 0; */
+}
+
+.card-1 h1 {
+    width: 100%;
+    font-size: 24px;
+    line-height: 35px;
+    height: 35px;
+    background: #e2e2e2;
+    letter-spacing: 1px;
+    word-spacing: 2.2px;
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid #000;
+}
+
+.formDiv {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    padding: 50px 25px;
+}
+
+.formDiv form {
+    display: block;
+    width: 100%;
+    height: 35px;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.inputGroup i {
+    width: 35px;
+    height: 35px;
+    background: #e2e2e2;
+    color: #000;
+    line-height: 35px;
+    margin-left: 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .1s linear;
+}
+
+.inputGroup i:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.inputGroup input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: #e2e2e2;
+    color: #000;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 0 15px;
+}
+
+.inputGroup input:focus {
+    border: 1px solid #000;
+    letter-spacing: 1.5px;
+}
+
+.card-2 {
+    width: 100%;
+    min-height: 100px;
+}
+
+.card-2 table {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.card-2 table thead {
+    background: #e2e2e2;
+    font-size: 20px;
+}
+
+th,
+td {
+    padding: 3px 5px;
+}
+
+.card-2 tbody tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+.cogs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cogsTD {
+    width: 90px;
+}
+
+.cogs button {
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    background: #e2e2e2;
+    color: #000;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px #fff;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.cogs button:hover {
+    box-shadow: inset 0 0 10px #000;
+    background: #000;
+    color: #fff;
+    transition: all .1s linear;
+}
+
+.card-2 tbody tr:nth-child(even) {
+    background: #e7e7e7;
+}
+
+.deleteAllDiv {
+    width: 100%;
+    margin: 10px 0;
+}
+
+button[name=deleteall] {
+    width: 120px;
+    height: 35px;
+    background: red;
+    /* background: linear-gradient(45deg, red, darkred); */
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0 3px #000;
+    transition: all .1s linear;
+}
+
+.deleteAll:hover {
+    background: darkred;
+    transition: all .1s linear;
+}
+
+.footer {
+    width: 100%;
+    background: #333;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: 400;
+    padding: 3px 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
