@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule about index.php?about=about
+RewriteRule ^([a-zA-Z0-9-_]+)$ index.php?post=$1
+RewriteRule ^page/([a-zA-Z0-9-_]+)$ index.php?page=$1
+
+ErrorDocument 404 https://www.instagram.com/mushvigsh/
