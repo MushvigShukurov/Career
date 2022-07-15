@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.group {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.group>input {
+    width: 100px;
+    height: 25px;
+    border: 1px solid #000;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.group>input:not(:first-child) {
+    margin-left: 15px;
+}
+
+.area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.area>.box {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(21, 255, 0, 0.5);
+    position: relative;
+}
+
+.area>.box>img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    position: absolute;
+    top: calc((100% - 25px) / 2);
+    left: calc((100% - 25px) / 2);
+
+}
+
+.control {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.control>button {
+    width: 30px;
+    height: 30px;
+    padding: 0px 3px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .1s linear;
+    overflow: hidden;
+}
+.control>button:nth-child(1){
+    transform: rotate(-45deg);
+}
+.control>button:nth-child(3){
+    transform: rotate(45deg);
+}
+.control>button:nth-child(7){
+    transform: rotate(45deg);
+}
+.control>button:nth-child(9){
+    transform: rotate(-45deg);
+}
+.control >button:hover{
+    background-color: rgba(21, 255, 0, 0.5);
+}
+.control>button:nth-child(5):hover{
+    background-color: darkcyan;
+}

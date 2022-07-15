@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="group">
+        <input type="number" id="bx" min="100" max="700" placeholder="Box width | height" value="500" required>
+        <input type="number" id="bl" min="0" max="100" placeholder="Ball width | height" value="25" required>
+        <input type="number" id="st" min="0" max="100" placeholder="Step Length" value="1" required>
+    </div>
+    <div class="area">
+        <div class="box">
+            <img src="soccer-ball.png" alt="" id="ball">
+        </div>
+        <div class="control">
+            <button id="1"><i class="fas fa-long-arrow-alt-up"></i></button>
+            <button id="2"><i class="fas fa-long-arrow-alt-up"></i></button>
+            <button id="3"><i class="fas fa-long-arrow-alt-up"></i></button>
+            <button id="4"><i class="fas fa-long-arrow-alt-left"></i></button>
+            <button id="5"><i class="fas fa-anchor"></i></button>
+            <button id="6"><i class="fas fa-long-arrow-alt-right"></i></button>
+            <button id="7"><i class="fas fa-long-arrow-alt-down"></i></button>
+            <button id="8"><i class="fas fa-long-arrow-alt-down"></i></button>
+            <button id="9"><i class="fas fa-long-arrow-alt-down"></i></button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
