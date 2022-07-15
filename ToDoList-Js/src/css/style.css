@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+input, button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 50px 5px;
+}
+
+.container h1 {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #0a71fe;
+  overflow: hidden;
+}
+
+.container .group input {
+  width: calc(100% - 150px);
+  height: 30px;
+  padding: 0 5px;
+}
+
+.container .group button {
+  width: 150px;
+  height: 30px;
+  background-color: #0a71fe;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container ul {
+  padding: 50px 5px;
+  display: block;
+}
+
+.container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 3px;
+  border-radius: 3px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.container ul li:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container ul li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container ul li p {
+  width: calc(100% - 30px);
+  min-height: 30px;
+}
+
+.container ul li i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: #000;
+}
+
+.container ul li i:hover {
+  color: #0a71fe;
+}
+/*# sourceMappingURL=style.css.map */
