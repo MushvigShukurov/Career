@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.exe
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.deps.json
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.runtimeconfig.json
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.runtimeconfig.dev.json
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.dll
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\bin\Debug\netcoreapp3.1\9AprelTekrar1.pdb
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.AssemblyInfo.cs
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.dll
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.pdb
+C:\Users\User\Desktop\codeacademy\9Aprel\9AprelTekrar1\obj\Debug\netcoreapp3.1\9AprelTekrar1.genruntimeconfig.cache
